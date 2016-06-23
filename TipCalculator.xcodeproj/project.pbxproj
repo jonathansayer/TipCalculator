@@ -14,6 +14,7 @@
 		A97A1E441D1C0F7800B7D931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A97A1E421D1C0F7800B7D931 /* LaunchScreen.storyboard */; };
 		A97A1E4F1D1C0F7800B7D931 /* TipCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A1E4E1D1C0F7800B7D931 /* TipCalculatorTests.swift */; };
 		A97A1E5A1D1C0F7800B7D931 /* TipCalculatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A1E591D1C0F7800B7D931 /* TipCalculatorUITests.swift */; };
+		A97A1E681D1C0FFF00B7D931 /* TipCalculatorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A1E671D1C0FFF00B7D931 /* TipCalculatorModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		A97A1E551D1C0F7800B7D931 /* TipCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TipCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97A1E591D1C0F7800B7D931 /* TipCalculatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TipCalculatorUITests.swift; sourceTree = "<group>"; };
 		A97A1E5B1D1C0F7800B7D931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A97A1E671D1C0FFF00B7D931 /* TipCalculatorModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipCalculatorModel.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,7 @@
 		A97A1E381D1C0F7800B7D931 /* TipCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				A97A1E691D1C375500B7D931 /* models */,
 				A97A1E391D1C0F7800B7D931 /* AppDelegate.swift */,
 				A97A1E3B1D1C0F7800B7D931 /* ViewController.swift */,
 				A97A1E3D1D1C0F7800B7D931 /* Main.storyboard */,
@@ -123,6 +126,14 @@
 				A97A1E5B1D1C0F7800B7D931 /* Info.plist */,
 			);
 			path = TipCalculatorUITests;
+			sourceTree = "<group>";
+		};
+		A97A1E691D1C375500B7D931 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				A97A1E671D1C0FFF00B7D931 /* TipCalculatorModel.swift */,
+			);
+			name = models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +204,7 @@
 				TargetAttributes = {
 					A97A1E351D1C0F7800B7D931 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = UAFL4WVEU2;
 					};
 					A97A1E491D1C0F7800B7D931 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -256,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A97A1E681D1C0FFF00B7D931 /* TipCalculatorModel.swift in Sources */,
 				A97A1E3C1D1C0F7800B7D931 /* ViewController.swift in Sources */,
 				A97A1E3A1D1C0F7800B7D931 /* AppDelegate.swift in Sources */,
 			);
@@ -401,10 +414,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bloc.io.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = io.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -412,10 +428,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = TipCalculator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = bloc.io.TipCalculator;
+				PRODUCT_BUNDLE_IDENTIFIER = io.TipCalculator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -484,6 +503,7 @@
 				A97A1E601D1C0F7800B7D931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A97A1E611D1C0F7800B7D931 /* Build configuration list for PBXNativeTarget "TipCalculatorTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +512,7 @@
 				A97A1E631D1C0F7800B7D931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A97A1E641D1C0F7800B7D931 /* Build configuration list for PBXNativeTarget "TipCalculatorUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +521,7 @@
 				A97A1E661D1C0F7800B7D931 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
